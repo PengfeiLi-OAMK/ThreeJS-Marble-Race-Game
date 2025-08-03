@@ -125,7 +125,7 @@ export default function Player() {
       >
         <mesh castShadow>
           <icosahedronGeometry args={[0.3, 1]} />
-          <meshStandardMaterial color="mediumpurple" />
+          <meshStandardMaterial flatShading color="mediumpurple" />
         </mesh>
       </RigidBody>
     </>

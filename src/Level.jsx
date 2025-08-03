@@ -5,10 +5,26 @@ import { useFrame } from '@react-three/fiber'
 import { Float, Text, useGLTF } from '@react-three/drei'
 
 const boxGeometry = new THREE.BoxGeometry(1, 1, 1)
-const floor1Material = new THREE.MeshStandardMaterial({ color: 'limegreen' })
-const floor2Material = new THREE.MeshStandardMaterial({ color: 'greenyellow' })
-const obstacleMaterial = new THREE.MeshStandardMaterial({ color: 'orangered' })
-const wallMaterial = new THREE.MeshStandardMaterial({ color: 'slategrey' })
+const floor1Material = new THREE.MeshStandardMaterial({
+  color: 'limegreen',
+  metalness: 0,
+  roughness: 0,
+})
+const floor2Material = new THREE.MeshStandardMaterial({
+  color: 'yellowgreen',
+  metalness: 0,
+  roughness: 0,
+})
+const obstacleMaterial = new THREE.MeshStandardMaterial({
+  color: '#ff0000',
+  metalness: 0,
+  roughness: 1,
+})
+const wallMaterial = new THREE.MeshStandardMaterial({
+  color: '#887777',
+  metalness: 0,
+  roughness: 0,
+})
 
 export function BlockStart({ position = [0, 0, 0] }) {
   return (
